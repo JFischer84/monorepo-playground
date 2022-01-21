@@ -1,0 +1,28 @@
+{
+  "root": "apps/mycv-e2e",
+  "sourceRoot": "apps/mycv-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/mycv-e2e/cypress.json",
+        "devServerTarget": "mycv:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "mycv:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/mycv-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["mycv"]
+}
