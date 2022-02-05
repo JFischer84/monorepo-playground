@@ -33,11 +33,11 @@ export function Index() {
                         </div>
                       </p>
                     </div>
-                    <ProgressBar colorScheme="javascript" title="JavaScript" />
-                    <ProgressBar colorScheme="typescript" title="TypeScript" />
-                    <ProgressBar colorScheme="react" title="React" />
-                    <ProgressBar colorScheme="java" title="Java" />
-                    <ProgressBar colorScheme="springboot" title="Spring Boot" />
+                    <ProgressBar fillingPercentage="75" colorScheme="javascript" title="JavaScript" />
+                    <ProgressBar fillingPercentage="85" colorScheme="typescript" title="TypeScript" />
+                    <ProgressBar fillingPercentage="85" colorScheme="react" title="React" />
+                    <ProgressBar fillingPercentage="75" colorScheme="java" title="Java" />
+                    <ProgressBar fillingPercentage="60" colorScheme="springboot" title="Spring Boot" />
                   </div>
                 </div>
               </div>

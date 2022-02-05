@@ -10,53 +10,47 @@
     border: 4px solid rgba(0, 0, 0, 0.7);
     border-radius: 15px;
 
-    .colorjs{
+    .filling {
       position: absolute;
-      background-color: #f7e018;
       width: 0px;
       height: 10px;
       border-radius: 15px;
-      animation: progres75 4s ease 0.5s 1 forwards;
     }
   }
 
+  .colorjs {
+    background-color: #f7e018;
+  }
 
-
-  .progress .colorts{
-    position: absolute;
+  .colorts {
     background-color: #3178c6;
-    width: 0px;
-    height: 10px;
-    border-radius: 15px;
-    animation: progres85 4s ease 0.5s 1 forwards;
   }
 
-  .progress .colorreact{
-    position: absolute;
+  .colorreact {
     background-color: #61dafb;
-    width: 0px;
-    height: 10px;
-    border-radius: 15px;
-    animation: progres85 4s ease 0.5s 1 forwards;
   }
 
-  .progress .colorjava{
-    position: absolute;
+  .colorjava {
     background-color: #e62a2e;
-    width: 0px;
-    height: 10px;
-    border-radius: 15px;
+  }
+
+  .colorsb {
+    background-color: #77c037;
+  }
+
+
+  .filling60 {
+    animation: progres60 4s ease 0.5s 1 forwards;
+  }
+
+  .filling75 {
     animation: progres75 4s ease 0.5s 1 forwards;
   }
 
-  .progress .colorsb{
-    position: absolute;
-    background-color: #77c037;
-    width: 0px;
-    height: 10px;
-    border-radius: 15px;
-    animation: progres60 4s ease 0.5s 1 forwards;
+  .filling85 {
+    animation: progres85 4s ease 0.5s 1 forwards;
   }
+
 
   @keyframes progres85{
     0%{
@@ -67,14 +61,6 @@
     }
   };
 
-  @keyframes progres80{
-    0%{
-      width: 0%;
-    }
-    100%{
-      width: 80%;
-    }
-  };
 
   @keyframes progres75{
     0%{
