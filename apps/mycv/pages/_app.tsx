@@ -1,4 +1,4 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import './app.scss';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 

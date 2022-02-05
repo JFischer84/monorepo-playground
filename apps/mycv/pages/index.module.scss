@@ -1,32 +1,23 @@
-$enable-shadows: true;
-$primary: rgb(0, 19, 223);
-
-
-$body-color:  #333;
-$body-bg: #f2f2f2;
-
-// @import "../node_modules/";
-//@import "../node_modules/react-bootstrap/";
-
 .page {
-  h1 {
-    color: red;
+  .uperContainer {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 36px;
+
+    .profilePicture {
+      border-radius: 50%;
+    }
+
+    .imageContainer {
+      margin-bottom: 24px;
+    }
+
+    .statTitle {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
   }
 }
-
-.cardContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-between;
-
-  .profilePicture {
-    border-radius: 50%;
-  }
-
-  .imageContainer {
-    margin-bottom: 24px;
-  }
-}
-
-

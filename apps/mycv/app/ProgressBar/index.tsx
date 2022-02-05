@@ -1,13 +1,27 @@
 import styles from './index.module.scss';
 
 /* eslint-disable-next-line */
-export interface ProgressBarProps {}
+export interface ProgressBarProps {
+  title: string;
+  colorScheme: 'javascript' | 'java' | 'typescript' | 'react' | 'springboot';
+}
 
-export function ProgressBar(props: ProgressBarProps) {
+
+// TODO: make progress percentage configurable from outside; make progress colour configurable from outside; decide on border color
+export function ProgressBar({title, colorScheme}: ProgressBarProps) {
+  const colorSchemeMap = {
+    javascript: styles.colorjs,
+    java: styles.colorjava,
+    typescript: styles.colorts,
+    react: styles.colorreact,
+    springboot: styles.colorsb
+  }
+
   return (
-    <div>
+    <div className={styles.progressBar}>
+      <h5 className={styles.title}>{title}</h5>
       <div className={styles.progress}>
-        <div className={styles.color} />
+        <div className={colorSchemeMap[colorScheme]} />
       </div>
     </div>
   );
