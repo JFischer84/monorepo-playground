@@ -16,22 +16,22 @@ export function Index() {
                         <Image className={styles.profilePicture} width={256} height={256} src="/profile_pic2.jpg" alt="profile picture" />
                       </div>
                       <h5 className="card-title">Jonas Fischer</h5>
-                      <p className="card-text">
-                        <div className="row">
-                          <div className="col">
-                            <p className={styles.statTitle}>Class & Level:</p>
-                            <p>Developer 7</p>
-                            <p className={styles.statTitle}>Background:</p>
-                            <p>Catlover/Gamer</p>
-                          </div>
-                          <div className="col">
-                            <p className={styles.statTitle}>Alignment:</p>
-                            <p>Neutral Good</p>
-                            <p className={styles.statTitle}>Race:</p>
-                            <p>Human</p>
+                        <div className={styles.factSection}>
+                          <div className="row">
+                           <div className="col">
+                             <p className={styles.stat}><u>Developer 7</u></p>
+                             <p>Class & Level</p>
+                             <p className={styles.stat}><u>Catlover/Gamer</u></p>
+                             <p>Background</p>
+                           </div>
+                           <div className="col">
+                             <p className={styles.stat}><u>Neutral Good</u></p>
+                             <p>Alignment</p>
+                             <p className={styles.stat}><u>Human</u></p>
+                             <p>Race</p>
+                           </div>
                           </div>
                         </div>
-                      </p>
                     </div>
                     <ProgressBar fillingPercentage="75" colorScheme="javascript" title="JavaScript" />
                     <ProgressBar fillingPercentage="85" colorScheme="typescript" title="TypeScript" />
