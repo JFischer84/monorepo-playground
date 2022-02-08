@@ -1,0 +1,13 @@
+.factContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 16px;
+
+  .fact {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 0;
+  }
+}
+
