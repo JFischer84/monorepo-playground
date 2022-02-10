@@ -48,6 +48,16 @@
       "options": {
         "lintFilePatterns": ["apps/mycv/**/*.{ts,tsx,js,jsx}"]
       }
+    },
+    "stylelint": {
+      "executor": "@nrwl/workspace:run-commands",
+      "options": {
+        "commands": [
+          {
+            "command": "yarn stylelint 'apps/mycv/**/*.scss'"
+          }
+        ]
+      }
     }
   },
   "tags": []

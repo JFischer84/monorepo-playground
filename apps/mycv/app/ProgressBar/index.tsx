@@ -1,12 +1,11 @@
+import React from 'react';
 import styles from './index.module.scss';
 
-/* eslint-disable-next-line */
-export interface ProgressBarProps {
+interface ProgressBarProps {
   title: string;
   colorScheme: 'javascript' | 'java' | 'typescript' | 'react' | 'springboot';
   fillingPercentage: '60' | '75' | '85'
 }
-
 
 export function ProgressBar({title, colorScheme, fillingPercentage}: ProgressBarProps) {
   const colorSchemeMap = {
@@ -14,13 +13,13 @@ export function ProgressBar({title, colorScheme, fillingPercentage}: ProgressBar
     java: styles.colorjava,
     typescript: styles.colorts,
     react: styles.colorreact,
-    springboot: styles.colorsb
+    springboot: styles.colorsb,
   };
 
   const fillingMap = {
     60: styles.filling60,
     75: styles.filling75,
-    85: styles.filling85
+    85: styles.filling85,
   };
 
   return (
