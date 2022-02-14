@@ -1,7 +1,4 @@
 # TODO
 
-- Stylelint 
-  - add custom command https://nx.dev/executors/run-commands-builder
-- Bootstrap via SCSS
-- Get rid of SCSS duplications in the ProgressBar
-- Write Tests
+- Write Test for index.tsx
+- add badges for feats (jest, enzyme etc.)

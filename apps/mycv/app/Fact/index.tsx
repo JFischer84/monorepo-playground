@@ -10,7 +10,7 @@ export function Fact({factTitle, description}: FactProps) {
   return (
     <div className={styles.factContainer}>
       <p className={styles.fact}><u>{factTitle}</u></p>
-      <p>{description}</p>
+      <p className={styles.description}>{description}</p>
     </div>
   );
 }

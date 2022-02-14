@@ -30,12 +30,48 @@ export function Index() {
                         </div>
                       </div>
                     </div>
+                    <h5>Skills</h5>
                     <div className={styles.progressBarContainer}>
                       <ProgressBar fillingPercentage="75" colorScheme="javascript" title="JavaScript" />
                       <ProgressBar fillingPercentage="85" colorScheme="typescript" title="TypeScript" />
                       <ProgressBar fillingPercentage="85" colorScheme="react" title="React" />
                       <ProgressBar fillingPercentage="75" colorScheme="java" title="Java" />
                       <ProgressBar fillingPercentage="60" colorScheme="springboot" title="Spring Boot" />
+                    </div>
+                    <h5>Feats</h5>
+                    <div className={styles.featsContainer}>
+                      <div className="row align-items-center gx-3">
+                        <div className="col">
+                          <h5><span className="badge bg-info text-dark">Jest</span></h5>
+                        </div>
+                        <div className="col">
+                          <h5><span className="badge bg-info text-dark">Enzyme</span></h5>
+                        </div>
+                        <div className="col">
+                          <h5><span className="badge bg-info text-dark">JUnit</span></h5>
+                        </div>
+                        <div className="col">
+                          <h5><span className="badge bg-info text-dark">Mockito</span></h5>
+                        </div>
+                        <div className="col">
+                          <h5><span className="badge bg-info text-dark">Elasticsearch</span></h5>
+                        </div>
+                        <div className="col">
+                          <h5><span className="badge bg-info text-dark">Git</span></h5>
+                        </div>
+                        <div className="col">
+                          <h5><span className="badge bg-info text-dark">Scrum</span></h5>
+                        </div>
+                      </div>
+                    </div>
+                    <h5>Background</h5>
+                    <div>
+                      <ul className="list-group list-group-flush">
+                        <li className="list-group-item active" aria-current="true">2018 - Today: Software Developer / Immowelt Hamburg GmbH</li>
+                        <li className="list-group-item">2015 - 2018: Software Developer Apprenticeship / Immowelt Hamburg GmbH</li>
+                        <li className="list-group-item">2013 - 2015: Studies Game Programming / SAE Hamburg (Diploma)</li>
+                        <li className="list-group-item">2004 - 2011: Studies Media Culture / Universität Hamburg (Bakkalaureus Artium)</li>
+                      </ul>
                     </div>
                   </div>
                 </div>
