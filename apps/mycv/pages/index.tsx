@@ -5,6 +5,9 @@ import {ProgressBar} from '../app/ProgressBar';
 import {Fact} from '../app/Fact';
 
 export function Index() {
+  const openLink = (link: string) => {
+    window.open(link);
+  };
   return (
     <div className={styles.page}>
       <div className="wrapper">
@@ -42,36 +45,51 @@ export function Index() {
                     <div className={styles.featsContainer}>
                       <div className="row align-items-center gx-3">
                         <div className="col">
-                          <h5><span className="badge bg-info text-dark">Jest</span></h5>
+                          <h3><span className="badge bg-primary text-light">Jest</span></h3>
                         </div>
                         <div className="col">
-                          <h5><span className="badge bg-info text-dark">Enzyme</span></h5>
+                          <h3><span className="badge bg-primary text-light">Enzyme</span></h3>
                         </div>
                         <div className="col">
-                          <h5><span className="badge bg-info text-dark">JUnit</span></h5>
+                          <h3><span className="badge bg-primary text-light">JUnit</span></h3>
                         </div>
                         <div className="col">
-                          <h5><span className="badge bg-info text-dark">Mockito</span></h5>
+                          <h3><span className="badge bg-primary text-light">Mockito</span></h3>
                         </div>
                         <div className="col">
-                          <h5><span className="badge bg-info text-dark">Elasticsearch</span></h5>
+                          <h3><span className="badge bg-primary text-light">Elasticsearch</span></h3>
                         </div>
                         <div className="col">
-                          <h5><span className="badge bg-info text-dark">Git</span></h5>
+                          <h3><span className="badge bg-primary text-light">Git</span></h3>
                         </div>
                         <div className="col">
-                          <h5><span className="badge bg-info text-dark">Scrum</span></h5>
+                          <h3><span className="badge bg-primary text-light">Scrum</span></h3>
                         </div>
                       </div>
                     </div>
                     <h5>Background</h5>
-                    <div>
+                    <div className={styles.backgroundContainer}>
                       <ul className="list-group list-group-flush">
                         <li className="list-group-item active" aria-current="true">2018 - Today: Software Developer / Immowelt Hamburg GmbH</li>
                         <li className="list-group-item">2015 - 2018: Software Developer Apprenticeship / Immowelt Hamburg GmbH</li>
                         <li className="list-group-item">2013 - 2015: Studies Game Programming / SAE Hamburg (Diploma)</li>
+                        <li className="list-group-item">2012 - 2013: Nursery School Teacher Apprenticeship / Fachschule für Sozialpädagogik 2</li>
+                        <li className="list-group-item">2012 - 2012: Internships as Nursery School Teacher</li>
+                        <li className="list-group-item">2011 - 2012: Call Center Agent / Axel Springer Direkt</li>
                         <li className="list-group-item">2004 - 2011: Studies Media Culture / Universität Hamburg (Bakkalaureus Artium)</li>
                       </ul>
+                    </div>
+                    <h5>Profiles</h5>
+                    <div className="row align-items-center gx-4">
+                      <div className="col">
+                        <button type="button" className="btn btn-primary" onClick={() => openLink('https://github.com/jfischer84')}>Github</button>
+                      </div>
+                      <div className="col">
+                        <button type="button" className="btn btn-primary" onClick={() => openLink('https://www.xing.com/profile/Jonas_Fischer34/cv')}>Xing</button>
+                      </div>
+                      <div className="col">
+                        <button type="button" className="btn btn-primary" onClick={() => openLink('https://www.linkedin.com/in/jonas-fischer-a5071998/')}>Linkedin</button>
+                      </div>
                     </div>
                   </div>
                 </div>
