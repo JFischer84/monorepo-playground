@@ -21,7 +21,7 @@ export function Index() {
                       <div className={styles.imageContainer}>
                         <Image className={styles.profilePicture} width={256} height={256} src="/profile_pic2.jpg" alt="profile picture" />
                       </div>
-                      <h5 className="card-title">Jonas Fischer</h5>
+                      <h4 className="card-title">Jonas Fischer</h4>
                       <div className={styles.factSection}>
                         <div className={styles.factSubContainer}>
                           <Fact factTitle="Developer 7" description="Class & Level" />
@@ -33,7 +33,7 @@ export function Index() {
                         </div>
                       </div>
                     </div>
-                    <h5>Skills</h5>
+                    <h4>Skills</h4>
                     <div className={styles.progressBarContainer}>
                       <ProgressBar fillingPercentage="75" colorScheme="javascript" title="JavaScript" />
                       <ProgressBar fillingPercentage="85" colorScheme="typescript" title="TypeScript" />
@@ -41,7 +41,7 @@ export function Index() {
                       <ProgressBar fillingPercentage="75" colorScheme="java" title="Java" />
                       <ProgressBar fillingPercentage="60" colorScheme="springboot" title="Spring Boot" />
                     </div>
-                    <h5>Feats</h5>
+                    <h4>Feats</h4>
                     <div className={styles.featsContainer}>
                       <div className="row align-items-center gx-3">
                         <div className="col">
@@ -67,7 +67,7 @@ export function Index() {
                         </div>
                       </div>
                     </div>
-                    <h5>Background</h5>
+                    <h4>Background</h4>
                     <div className={styles.backgroundContainer}>
                       <ul className="list-group list-group-flush">
                         <li className="list-group-item active" aria-current="true">2018 - Today: Software Developer / Immowelt Hamburg GmbH</li>
@@ -79,7 +79,7 @@ export function Index() {
                         <li className="list-group-item">2004 - 2011: Studies Media Culture / Universität Hamburg (Bakkalaureus Artium)</li>
                       </ul>
                     </div>
-                    <h5>Profiles</h5>
+                    <h4>Profiles</h4>
                     <div className="row align-items-center gx-4">
                       <div className="col">
                         <button type="button" className="btn btn-primary" onClick={() => openLink('https://github.com/jfischer84')}>Github</button>
