@@ -21,12 +21,12 @@ export function Index() {
                       <h5 className="card-title">Jonas Fischer</h5>
                       <div className={styles.factSection}>
                         <div className={styles.factSubContainer}>
-                          <Fact fact="Developer 7" description="Class & Level" />
-                          <Fact fact="Catlover/Gamer" description="Background" />
+                          <Fact factTitle="Developer 7" description="Class & Level" />
+                          <Fact factTitle="Catlover/Gamer" description="Background" />
                         </div>
                         <div className={styles.factSubContainer}>
-                          <Fact fact="Neutral Good" description="Alignment" />
-                          <Fact fact="Human" description="Race" />
+                          <Fact factTitle="Neutral Good" description="Alignment" />
+                          <Fact factTitle="Human" description="Race" />
                         </div>
                       </div>
                     </div>
