@@ -6,7 +6,7 @@ interface FactProps {
 
 export function Feat({featTitle}: FactProps) {
   return (
-    <div className="col">
+    <div className="col text-center">
       <h3><span className="badge bg-primary text-light">{featTitle}</span></h3>
     </div>
   );
