@@ -13,13 +13,13 @@ export function ProgressBar({title, colorScheme, fillingPercentage}: ProgressBar
     java: styles.colorjava,
     typescript: styles.colorts,
     react: styles.colorreact,
-    springboot: styles.colorsb,
+    springboot: styles.colorsb
   };
 
   const fillingMap = {
     60: styles.filling60,
     75: styles.filling75,
-    85: styles.filling85,
+    85: styles.filling85
   };
 
   return (
