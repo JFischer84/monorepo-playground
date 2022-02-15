@@ -3,6 +3,10 @@ import Image from 'next/image';
 import styles from './index.module.scss';
 import {ProgressBar} from '../app/ProgressBar';
 import {Fact} from '../app/Fact';
+import {Feat} from '../app/Feat';
+import {AdventureLogEntry} from '../app/AdventureLogEntry';
+import feats from './feats';
+import adventureLogEntries from './adventureLogEntries';
 
 export function Index() {
   const openLink = (link: string) => {
@@ -21,7 +25,7 @@ export function Index() {
                       <div className={styles.imageContainer}>
                         <Image className={styles.profilePicture} width={256} height={256} src="/profile_pic2.jpg" alt="profile picture" />
                       </div>
-                      <h4 className="card-title">Jonas Fischer</h4>
+                      <h3 className="card-title">Jonas Fischer</h3>
                       <div className={styles.factSection}>
                         <div className={styles.factSubContainer}>
                           <Fact factTitle="Developer 7" description="Class & Level" />
@@ -44,39 +48,17 @@ export function Index() {
                     <h4>Feats</h4>
                     <div className={styles.featsContainer}>
                       <div className="row align-items-center gx-3">
-                        <div className="col">
-                          <h3><span className="badge bg-primary text-light">Jest</span></h3>
-                        </div>
-                        <div className="col">
-                          <h3><span className="badge bg-primary text-light">Enzyme</span></h3>
-                        </div>
-                        <div className="col">
-                          <h3><span className="badge bg-primary text-light">JUnit</span></h3>
-                        </div>
-                        <div className="col">
-                          <h3><span className="badge bg-primary text-light">Mockito</span></h3>
-                        </div>
-                        <div className="col">
-                          <h3><span className="badge bg-primary text-light">Elasticsearch</span></h3>
-                        </div>
-                        <div className="col">
-                          <h3><span className="badge bg-primary text-light">Git</span></h3>
-                        </div>
-                        <div className="col">
-                          <h3><span className="badge bg-primary text-light">Scrum</span></h3>
-                        </div>
+                        {feats.map((feat) => (
+                          <Feat featTitle={feat} />
+                        ))}
                       </div>
                     </div>
-                    <h4>Background</h4>
+                    <h4>Adventure Log</h4>
                     <div className={styles.backgroundContainer}>
                       <ul className="list-group list-group-flush">
-                        <li className="list-group-item active" aria-current="true">2018 - Today: Software Developer / Immowelt Hamburg GmbH</li>
-                        <li className="list-group-item">2015 - 2018: Software Developer Apprenticeship / Immowelt Hamburg GmbH</li>
-                        <li className="list-group-item">2013 - 2015: Studies Game Programming / SAE Hamburg (Diploma)</li>
-                        <li className="list-group-item">2012 - 2013: Nursery School Teacher Apprenticeship / Fachschule für Sozialpädagogik 2</li>
-                        <li className="list-group-item">2012 - 2012: Internships as Nursery School Teacher</li>
-                        <li className="list-group-item">2011 - 2012: Call Center Agent / Axel Springer Direkt</li>
-                        <li className="list-group-item">2004 - 2011: Studies Media Culture / Universität Hamburg (Bakkalaureus Artium)</li>
+                        {adventureLogEntries.map((entry) => (
+                          <AdventureLogEntry entry={entry} />
+                        ))}
                       </ul>
                     </div>
                     <h4>Profiles</h4>
