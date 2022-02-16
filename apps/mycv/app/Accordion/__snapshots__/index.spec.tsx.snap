@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Accordion should render correctly 1`] = `
+<div
+  className="accordion customAccordion"
+>
+  <div
+    className="accordion-item"
+  >
+    <h4
+      className="accordion-header"
+    >
+      <button
+        className="accordion-button collapsed"
+        onClick={[Function]}
+        type="button"
+      >
+        <h4>
+          test
+        </h4>
+      </button>
+    </h4>
+    <div
+      className="customAccordionTransition accordion-collapse collapse "
+    >
+      <div
+        className="accordion-body"
+      >
+        <span>
+          Child
+        </span>
+      </div>
+    </div>
+  </div>
+</div>
+`;

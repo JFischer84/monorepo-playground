@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import Image from 'next/image';
 import styles from './index.module.scss';
 import {ProgressBar} from '../app/ProgressBar';
@@ -7,12 +7,9 @@ import {Feat} from '../app/Feat';
 import {AdventureLogEntry} from '../app/AdventureLogEntry';
 import feats from './feats';
 import adventureLogEntries from './adventureLogEntries';
+import {Accordion} from '../app/Accordion';
 
 export function Index() {
-  const [isSkillsOpen, setSkillsOpen] = useState(false);
-  const [isFeatsOpen, setFeatsOpen] = useState(false);
-  const [isAdventureLogOpen, setAdventureLogOpen] = useState(false);
-
   const openLink = (link: string) => {
     window.open(link);
   };
@@ -43,79 +40,31 @@ export function Index() {
                       </div>
                     </div>
                     <div className={styles.progressBarContainer}>
-                      <div className={`accordion ${styles.customAccordion}`}>
-                        <div className="accordion-item">
-                          <h4 className="accordion-header">
-                            <button
-                              onClick={() => setSkillsOpen(!isSkillsOpen)}
-                              className={`accordion-button ${isSkillsOpen ? '' : 'collapsed'}`}
-                              type="button"
-                            >
-                              <h4>Skills</h4>
-
-                            </button>
-                          </h4>
-                          <div className={`${styles.customAccordionTransition} accordion-collapse collapse ${isSkillsOpen ? 'show' : ''}`}>
-                            <div className="accordion-body">
-                              <ProgressBar fillingPercentage="75" colorScheme="javascript" title="JavaScript" />
-                              <ProgressBar fillingPercentage="85" colorScheme="typescript" title="TypeScript" />
-                              <ProgressBar fillingPercentage="85" colorScheme="react" title="React" />
-                              <ProgressBar fillingPercentage="75" colorScheme="java" title="Java" />
-                              <ProgressBar fillingPercentage="60" colorScheme="springboot" title="Spring Boot" />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <Accordion title="Skill">
+                        <ProgressBar fillingPercentage="75" colorScheme="javascript" title="JavaScript" />
+                        <ProgressBar fillingPercentage="85" colorScheme="typescript" title="TypeScript" />
+                        <ProgressBar fillingPercentage="85" colorScheme="react" title="React" />
+                        <ProgressBar fillingPercentage="75" colorScheme="java" title="Java" />
+                        <ProgressBar fillingPercentage="60" colorScheme="springboot" title="Spring Boot" />
+                      </Accordion>
                     </div>
                     <div className={styles.featsContainer}>
-                      <div className={`accordion ${styles.customAccordion}`}>
-                        <div className="accordion-item">
-                          <h4 className="accordion-header">
-                            <button
-                              onClick={() => setFeatsOpen(!isFeatsOpen)}
-                              className={`accordion-button ${isFeatsOpen ? '' : 'collapsed'}`}
-                              type="button"
-                            >
-                              <h4>Feats</h4>
-
-                            </button>
-                          </h4>
-                          <div className={`${styles.customAccordionTransition} accordion-collapse collapse ${isFeatsOpen ? 'show' : ''}`}>
-                            <div className="accordion-body">
-                              <div className="row align-items-center gx-2">
-                                {feats.map((feat) => (
-                                  <Feat featTitle={feat} />
-                                ))}
-                              </div>
-                            </div>
-                          </div>
+                      <Accordion title="Feats">
+                        <div className="row align-items-center gx-2">
+                          {feats.map((feat) => (
+                            <Feat featTitle={feat} />
+                          ))}
                         </div>
-                      </div>
+                      </Accordion>
                     </div>
                     <div className={styles.adventureLogContainer}>
-                      <div className={`accordion ${styles.customAccordion}`}>
-                        <div className="accordion-item">
-                          <h4 className="accordion-header">
-                            <button
-                              onClick={() => setAdventureLogOpen(!isAdventureLogOpen)}
-                              className={`accordion-button ${isAdventureLogOpen ? '' : 'collapsed'}`}
-                              type="button"
-                            >
-                              <h4>Adventure Log</h4>
-
-                            </button>
-                          </h4>
-                          <div className={`${styles.customAccordionTransition} accordion-collapse collapse ${isAdventureLogOpen ? 'show' : ''}`}>
-                            <div className="accordion-body">
-                              <ul className="list-group list-group-flush">
-                                {adventureLogEntries.map((entry) => (
-                                  <AdventureLogEntry entry={entry} />
-                                ))}
-                              </ul>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
+                      <Accordion title="Adventure Log">
+                        <ul className="list-group list-group-flush">
+                          {adventureLogEntries.map((entry) => (
+                            <AdventureLogEntry entry={entry} />
+                          ))}
+                        </ul>
+                      </Accordion>
                     </div>
                     <h4>Profiles</h4>
                     <div className="row align-items-center gx-4">
