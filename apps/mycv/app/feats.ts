@@ -5,6 +5,8 @@ export default [
   'ESLint',
   'Stylelint',
   'ES6',
+  'Next.js',
+  'Webpack',
   'JUnit',
   'Mockito',
   'Elasticsearch',

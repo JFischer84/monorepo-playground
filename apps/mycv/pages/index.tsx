@@ -5,8 +5,8 @@ import {ProgressBar} from '../app/ProgressBar';
 import {Fact} from '../app/Fact';
 import {Feat} from '../app/Feat';
 import {AdventureLogEntry} from '../app/AdventureLogEntry';
-import feats from './feats';
-import adventureLogEntries from './adventureLogEntries';
+import feats from '../app/feats';
+import adventureLogEntries from '../app/adventureLogEntries';
 import {Accordion} from '../app/Accordion';
 
 export const Index = () => {
