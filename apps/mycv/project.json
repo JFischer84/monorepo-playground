@@ -9,7 +9,7 @@
       "defaultConfiguration": "production",
       "options": {
         "root": "apps/mycv",
-        "outputPath": "dist/apps/mycv/.next"
+        "outputPath": "dist/apps/mycv"
       },
       "configurations": {
         "production": {}
