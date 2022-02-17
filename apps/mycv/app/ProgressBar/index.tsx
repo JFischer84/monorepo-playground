@@ -7,7 +7,7 @@ interface ProgressBarProps {
   fillingPercentage: '60' | '75' | '85'
 }
 
-export function ProgressBar({title, colorScheme, fillingPercentage}: ProgressBarProps) {
+export const ProgressBar = ({title, colorScheme, fillingPercentage}: ProgressBarProps) => {
   const colorSchemeMap = {
     javascript: styles.colorjs,
     java: styles.colorjava,
@@ -30,6 +30,6 @@ export function ProgressBar({title, colorScheme, fillingPercentage}: ProgressBar
       </div>
     </div>
   );
-}
+};
 
 export default ProgressBar;

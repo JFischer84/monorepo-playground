@@ -6,7 +6,7 @@ interface AccordionProps {
   title: string;
 }
 
-export function Accordion({children, title}: AccordionProps) {
+export const Accordion = ({children, title}: AccordionProps) => {
   const [isOpen, setOpen] = useState(false);
   return (
     <div className={`accordion ${styles.customAccordion}`}>
@@ -30,6 +30,6 @@ export function Accordion({children, title}: AccordionProps) {
     </div>
 
   );
-}
+};
 
 export default Accordion;

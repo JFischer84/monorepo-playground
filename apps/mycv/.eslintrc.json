@@ -18,7 +18,11 @@
       "rules": {
         "@typescript-eslint/object-curly-spacing": ["error","never"],
         "comma-dangle": "off",
-        "@typescript-eslint/comma-dangle": ["error", "never"]
+        "@typescript-eslint/comma-dangle": ["error", "never"],
+        "react/function-component-definition": [2, {
+          "namedComponents":  "arrow-function" ,
+          "unnamedComponents": "arrow-function"
+        }]
       },
       "extends": [
         "airbnb",

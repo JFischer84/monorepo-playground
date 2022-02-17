@@ -7,11 +7,11 @@ interface FactProps {
   }
 }
 
-export function AdventureLogEntry({entry}: FactProps) {
+export const AdventureLogEntry = ({entry}: FactProps) => {
   const {entryText, isLast = false} = entry;
   return (
     <li className={`list-group-item ${isLast ? 'active' : ''}`} aria-current={isLast}>{entryText}</li>
   );
-}
+};
 
 export default AdventureLogEntry;

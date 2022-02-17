@@ -9,7 +9,7 @@ import feats from './feats';
 import adventureLogEntries from './adventureLogEntries';
 import {Accordion} from '../app/Accordion';
 
-export function Index() {
+export const Index = () => {
   const openLink = (link: string) => {
     window.open(link);
   };
@@ -52,7 +52,7 @@ export function Index() {
                       <Accordion title="Feats">
                         <div className="row align-items-center gx-2">
                           {feats.map((feat) => (
-                            <Feat featTitle={feat} />
+                            <Feat key={feat} featTitle={feat} />
                           ))}
                         </div>
                       </Accordion>
@@ -61,7 +61,7 @@ export function Index() {
                       <Accordion title="Adventure Log">
                         <ul className="list-group list-group-flush">
                           {adventureLogEntries.map((entry) => (
-                            <AdventureLogEntry entry={entry} />
+                            <AdventureLogEntry key={entry.entryText} entry={entry} />
                           ))}
                         </ul>
                       </Accordion>
@@ -87,6 +87,6 @@ export function Index() {
       </div>
     </div>
   );
-}
+};
 
 export default Index;

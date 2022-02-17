@@ -2,4 +2,4 @@
 
 - Write Test for pages/index.tsx
   - test shallow general and snapshot for detailed
-- implement accordion
+- Deploy somewhere? (AWS S3 Bucket?)
