@@ -40,7 +40,7 @@ export const Index = () => {
                       </div>
                     </div>
                     <div className={styles.progressBarContainer}>
-                      <Accordion title="Skill">
+                      <Accordion title="Skills">
                         <ProgressBar fillingPercentage="75" colorScheme="javascript" title="JavaScript" />
                         <ProgressBar fillingPercentage="85" colorScheme="typescript" title="TypeScript" />
                         <ProgressBar fillingPercentage="85" colorScheme="react" title="React" />
