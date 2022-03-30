@@ -2,6 +2,7 @@
   "version": 2,
   "projects": {
     "mycv": "apps/mycv",
-    "mycv-e2e": "apps/mycv-e2e"
+    "mycv-e2e": "apps/mycv-e2e",
+    "shared-components": "libs/shared-components"
   }
 }

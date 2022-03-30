@@ -9,5 +9,5 @@ module.exports = {
   coverageDirectory: '../../coverage/apps/mycv',
   setupFiles: [
     '<rootDir>/jest.setup.js'
-  ],
+  ]
 };

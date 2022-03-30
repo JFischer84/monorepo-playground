@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import styles from '../../pages/index.module.scss';
+import styles from './index.module.scss';
 
 interface AccordionProps {
   children: React.ReactNode;
