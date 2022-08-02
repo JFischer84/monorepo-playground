@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
-import useStore from '../store';
+import {IconCircleCheck} from '@tabler/icons';
+import useStore from '../Store/store';
 import styles from './index.module.scss';
 
 export const Index = () => {
@@ -12,7 +13,7 @@ export const Index = () => {
   const [species, setSpecies] = useState('');
   const [alignment, setAlignment] = useState('');
   const [feats, setFeats] = useState('');
-  const [showSuccessMessage, setShowSucessMessage] = useState(false);
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleSubmit = () => {
     setBaseData({name,
@@ -21,7 +22,7 @@ export const Index = () => {
       species,
       alignment});
     setFeatsInStore(feats.split(';'));
-    setShowSucessMessage(true);
+    setShowSuccessMessage(true);
   };
 
   return (
@@ -89,13 +90,23 @@ export const Index = () => {
         <textarea onChange={(event) => setFeats(event.target.value)} placeholder="e.g. Git; Elasticsearch; Ritual Caster" className="form-control" aria-label="With textarea" />
       </div>
       <div className={styles.callToActionContainer}>
-        <button onClick={() => handleSubmit()} type="button" className="btn btn-primary">Submit</button>
+        <button onClick={() => handleSubmit()} type="button" className="btn btn-primary">
+          <div className={styles.navButtonContainer}>
+            <div className={styles.navIconContainer}>
+              <IconCircleCheck
+                size={16}
+                stroke={3}
+              />
+            </div>
+            Submit
+          </div>
+        </button>
       </div>
       {showSuccessMessage && (
         <div className={styles.successMessageContainer}>
           <div className="alert alert-success alert-dismissible" role="alert">
             CV data saved to store successfully!
-            <button onClick={() => setShowSucessMessage(false)} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" />
+            <button onClick={() => setShowSuccessMessage(false)} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" />
           </div>
         </div>
       )}

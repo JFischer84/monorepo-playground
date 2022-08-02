@@ -5,4 +5,16 @@
   .navigation {
     margin-bottom: 16px;
   }
+
+  .navButtonContainer {
+    display: flex;
+    align-content: center;
+    align-items: center;
+  }
+
+  .navIconContainer {
+    display: inline;
+    margin-right: 6px;
+    margin-bottom: 3px;
+  }
 }

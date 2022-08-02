@@ -1,14 +1,16 @@
 import React, {useState} from 'react';
+import {IconCirclePlus, IconEye, IconHistory} from '@tabler/icons';
 import styles from './index.module.scss';
 import Cv from '../app/Cv';
 import Creator from '../app/Creator';
-import useStore from '../app/store';
+import useStore from '../app/Store/store';
 
 type NavId = 'SEE' | 'CREATE';
 
 export const Index = () => {
   const cvBaseData = useStore((state) => state.cvDataBaseData);
   const feats = useStore((state) => state.feats);
+  const resetStore = useStore((state) => state.reset);
   const [seeActive, setSeeActive] = useState(true);
 
   const onNavClick = (navId: NavId) => {
@@ -28,10 +30,43 @@ export const Index = () => {
               <div className={styles.navigation}>
                 <ul className="nav nav-pills">
                   <li className="nav-item">
-                    <button onClick={() => onNavClick('SEE')} className={`nav-link ${seeActive ? 'active' : ''}`} type="button">See</button>
+                    <button onClick={() => onNavClick('SEE')} className={`nav-link ${seeActive ? 'active' : ''}`} type="button">
+                      <div className={styles.navButtonContainer}>
+                        <div className={styles.navIconContainer}>
+                          <IconEye
+                            size={16}
+                            stroke={3}
+                          />
+                        </div>
+                        See
+                      </div>
+                    </button>
                   </li>
                   <li className="nav-item">
-                    <button onClick={() => onNavClick('CREATE')} className={`nav-link ${!seeActive ? 'active' : ''}`} type="button">Create</button>
+                    <button onClick={() => onNavClick('CREATE')} className={`nav-link ${!seeActive ? 'active' : ''}`} type="button">
+                      <div className={styles.navButtonContainer}>
+                        <div className={styles.navIconContainer}>
+                          <IconCirclePlus
+                            size={16}
+                            stroke={3}
+                          />
+                        </div>
+                        Create
+                      </div>
+                    </button>
+                  </li>
+                  <li className="nav-item">
+                    <button onClick={() => resetStore()} className="btn btn-outline-secondary" type="button">
+                      <div className={styles.navButtonContainer}>
+                        <div className={styles.navIconContainer}>
+                          <IconHistory
+                            size={16}
+                            stroke={3}
+                          />
+                        </div>
+                        Reset
+                      </div>
+                    </button>
                   </li>
                 </ul>
               </div>

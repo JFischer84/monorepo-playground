@@ -6,7 +6,7 @@ import {ProgressBar} from '../ProgressBar';
 import {Fact} from '../Fact';
 import {Feat} from '../Feat';
 import {AdventureLogEntry} from '../AdventureLogEntry';
-import adventureLogEntries from '../adventureLogEntries';
+import adventureLogEntries from '../Store/adventureLogEntries';
 
 interface CvProps {
   cvData: {
