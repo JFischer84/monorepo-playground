@@ -5,8 +5,10 @@
 This is my Playground to test a monorepo structure with NX.
 
 ## Projects
-- Mycv: A CV page for developers using Nextjs and Zustand. (Work in Progress)
-  (that's all for now, more to come)
+- Mycv: A CV page for developers using Nextjs and Zustand.
+  You can find the deployed app here: https://jonascv.vercel.app/ (Work in Progress)
+
+(that's all for now, more to come)
 
 
 
