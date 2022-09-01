@@ -4,6 +4,12 @@
 
   .navigation {
     margin-bottom: 16px;
+    display: flex;
+    justify-content: flex-start;
+    button {
+      margin-left: 6px;
+      width: 100px;
+    }
   }
 
   .navButtonContainer {

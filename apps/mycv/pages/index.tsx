@@ -28,9 +28,9 @@ export const Index = () => {
           <div className="row">
             <div className="col">
               <div className={styles.navigation}>
-                <ul className="nav nav-pills">
-                  <li className="nav-item">
-                    <button onClick={() => onNavClick('SEE')} className={`nav-link ${seeActive ? 'active' : ''}`} type="button">
+                <nav>
+                  <div className="nav nav-tabs" id="nav-tab" role="tablist">
+                    <button onClick={() => onNavClick('SEE')} className={`nav-item nav-link ${seeActive ? 'active' : ''}`} type="button">
                       <div className={styles.navButtonContainer}>
                         <div className={styles.navIconContainer}>
                           <IconEye
@@ -41,9 +41,7 @@ export const Index = () => {
                         See
                       </div>
                     </button>
-                  </li>
-                  <li className="nav-item">
-                    <button onClick={() => onNavClick('CREATE')} className={`nav-link ${!seeActive ? 'active' : ''}`} type="button">
+                    <button onClick={() => onNavClick('CREATE')} className={`nav-item nav-link ${!seeActive ? 'active' : ''}`} type="button">
                       <div className={styles.navButtonContainer}>
                         <div className={styles.navIconContainer}>
                           <IconCirclePlus
@@ -54,21 +52,19 @@ export const Index = () => {
                         Create
                       </div>
                     </button>
-                  </li>
-                  <li className="nav-item">
-                    <button onClick={() => resetStore()} className="btn btn-outline-secondary" type="button">
-                      <div className={styles.navButtonContainer}>
-                        <div className={styles.navIconContainer}>
-                          <IconHistory
-                            size={16}
-                            stroke={3}
-                          />
-                        </div>
-                        Reset
-                      </div>
-                    </button>
-                  </li>
-                </ul>
+                  </div>
+                </nav>
+                <button onClick={() => resetStore()} className="btn btn-outline-danger" type="button">
+                  <div className={styles.navButtonContainer}>
+                    <div className={styles.navIconContainer}>
+                      <IconHistory
+                        size={16}
+                        stroke={3}
+                      />
+                    </div>
+                    Reset
+                  </div>
+                </button>
               </div>
               <div className="card">
                 <div className="card-body">
