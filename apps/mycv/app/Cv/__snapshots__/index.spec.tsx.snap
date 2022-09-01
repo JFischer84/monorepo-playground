@@ -5,7 +5,7 @@ exports[`Cv should render correctly 1`] = `
   className="cardContent"
 >
   <div
-    className="uperContainer"
+    className="upperContainer"
   >
     <div
       className="imageContainer"
