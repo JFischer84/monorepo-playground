@@ -1,7 +1,6 @@
 # TODO
 
 - use bootstrap navbar for nav items
-- implement tag input for creator
 - Use mixins for ProgressBar
 - Write Test for pages/index.tsx
   - test shallow general and snapshot for detailed
@@ -9,7 +8,7 @@
 - validate input on creator
 - Add missing components to creator
 - Save to indexedDB (upload for Picture (blob), import JSon)
-- API Call (for Picture?) with Ajax (inject credentials via Vercel)
+- API Call (for Picture?) with Ajax/Axios (inject credentials via Vercel)
 - Set MyCV Folder in Vercel instead of root
 - Maybe: Use Request Animation Frame to solve Accordion issue
 - Maybe: Dark Mode

@@ -28,7 +28,7 @@ export const Index = ({cvData, feats}: CvProps) => {
 
   return (
     <div className={styles.cardContent}>
-      <div className={styles.uperContainer}>
+      <div className={styles.upperContainer}>
         <div className={styles.imageContainer}>
           <Image className={styles.profilePicture} width={256} height={256} src="/profile_pic2.jpg" alt="profile picture" />
         </div>

@@ -109,7 +109,7 @@ export const Index = () => {
       <div className={styles.featsContainer}>
         {feats.map((feat, index) => (
           // eslint-disable-next-line react/no-array-index-key
-          <div key={`${feat}-${index}`} className="alert alert-success alert-dismissible" role="alert">
+          <div key={`${feat}-${index}`} className="alert alert-primary alert-dismissible" role="alert">
             {feat}
             <button onClick={() => handleFeatRemove(feat)} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" />
           </div>
