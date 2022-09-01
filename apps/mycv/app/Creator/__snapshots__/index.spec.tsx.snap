@@ -142,15 +142,26 @@ exports[`Creator should render correctly 1`] = `
     <span
       className="input-group-text"
     >
-      Feats, separate with semicolon
+      Feats
     </span>
     <textarea
       aria-label="With textarea"
       className="form-control"
       onChange={[Function]}
-      placeholder="e.g. Git; Elasticsearch; Ritual Caster"
+      placeholder="e.g. Git, Elasticsearch, Ritual Caster"
+      value=""
     />
+    <button
+      className="btn btn-primary btn-sm"
+      onClick={[Function]}
+      type="button"
+    >
+      Add
+    </button>
   </div>
+  <div
+    className="featsContainer"
+  />
   <div
     className="callToActionContainer"
   >
@@ -159,7 +170,19 @@ exports[`Creator should render correctly 1`] = `
       onClick={[Function]}
       type="button"
     >
-      Submit
+      <div
+        className="navButtonContainer"
+      >
+        <div
+          className="navIconContainer"
+        >
+          <IconCircleCheck
+            size={16}
+            stroke={3}
+          />
+        </div>
+        Submit
+      </div>
     </button>
   </div>
 </div>

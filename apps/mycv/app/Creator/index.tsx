@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useRef, useState} from 'react';
 import {IconCircleCheck} from '@tabler/icons';
 import useStore from '../Store/store';
 import styles from './index.module.scss';
@@ -6,13 +6,15 @@ import styles from './index.module.scss';
 export const Index = () => {
   const setBaseData = useStore((state) => state.setCvBaseData);
   const setFeatsInStore = useStore((state) => state.setFeats);
+  const textAreaRef = useRef(null);
 
   const [name, setName] = useState('');
   const [classAndLevel, setClassAndLevel] = useState('');
   const [background, setBackground] = useState('');
   const [species, setSpecies] = useState('');
   const [alignment, setAlignment] = useState('');
-  const [feats, setFeats] = useState('');
+  const [currentFeat, setCurrentFeat] = useState('');
+  const [feats, setFeats] = useState([]);
   const [showSuccessMessage, setShowSuccessMessage] = useState(false);
 
   const handleSubmit = () => {
@@ -21,8 +23,21 @@ export const Index = () => {
       background,
       species,
       alignment});
-    setFeatsInStore(feats.split(';'));
+    setFeatsInStore(feats);
     setShowSuccessMessage(true);
+  };
+
+  const handleFeatSubmit = () => {
+    if (!feats.includes(currentFeat)) {
+      setFeats([...feats, currentFeat]);
+    }
+    setCurrentFeat('');
+    textAreaRef.current.focus();
+  };
+
+  const handleFeatRemove = (feat: string) => {
+    setFeats(feats.filter((f) => f !== feat));
+    textAreaRef.current.focus();
   };
 
   return (
@@ -85,9 +100,20 @@ export const Index = () => {
           aria-describedby="basic-addon1"
         />
       </div>
+
       <div className="input-group">
-        <span className="input-group-text">Feats, separate with semicolon</span>
-        <textarea onChange={(event) => setFeats(event.target.value)} placeholder="e.g. Git; Elasticsearch; Ritual Caster" className="form-control" aria-label="With textarea" />
+        <span className="input-group-text">Feats</span>
+        <textarea ref={textAreaRef} value={currentFeat} onChange={(event) => setCurrentFeat(event.target.value)} placeholder="e.g. Git, Elasticsearch, Ritual Caster" className="form-control" aria-label="With textarea" />
+        <button onClick={() => handleFeatSubmit()} type="button" className="btn btn-primary btn-sm">Add</button>
+      </div>
+      <div className={styles.featsContainer}>
+        {feats.map((feat, index) => (
+          // eslint-disable-next-line react/no-array-index-key
+          <div key={`${feat}-${index}`} className="alert alert-success alert-dismissible" role="alert">
+            {feat}
+            <button onClick={() => handleFeatRemove(feat)} type="button" className="btn-close" data-bs-dismiss="alert" aria-label="Close" />
+          </div>
+        ))}
       </div>
       <div className={styles.callToActionContainer}>
         <button onClick={() => handleSubmit()} type="button" className="btn btn-primary">
