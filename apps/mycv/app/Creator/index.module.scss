@@ -9,6 +9,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
   margin-top: 16px;
+  div {
+    max-width: 100%;
+  }
 }
 
 .callToActionContainer {
