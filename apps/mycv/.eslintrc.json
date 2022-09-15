@@ -28,6 +28,9 @@
         "react/function-component-definition": [2, {
           "namedComponents":  "arrow-function" ,
           "unnamedComponents": "arrow-function"
+        }],
+        "max-len": ["error", {
+          "code": 300
         }]
       },
       "extends": [
