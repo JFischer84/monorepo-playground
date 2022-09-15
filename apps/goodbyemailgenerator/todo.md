@@ -1,5 +1,6 @@
 - add text snippets as JSON
 - add more buttons for individual parts
 - add randomize buttons
+- copy button should copy subject and text
 - styling
 - tests
