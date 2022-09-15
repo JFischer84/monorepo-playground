@@ -1,5 +1,5 @@
 # TODO
-
+- add under construction label to create page
 - break creator in multiple components and test them separately
 - Find a way to add quest log entries conveniently
 - Use mixins for ProgressBar
