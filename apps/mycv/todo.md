@@ -1,7 +1,7 @@
 # TODO
 
-- break creator in multiple components and test them separately 
-- use bootstrap navbar for nav items
+- break creator in multiple components and test them separately
+- Find a way to add quest log entries conveniently
 - Use mixins for ProgressBar
 - Write Test for pages/index.tsx
   - test shallow general and snapshot for detailed
