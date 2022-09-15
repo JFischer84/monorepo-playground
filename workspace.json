@@ -1,6 +1,8 @@
 {
   "version": 2,
   "projects": {
+    "goodbyemailgenerator": "apps/goodbyemailgenerator",
+    "goodbyemailgenerator-e2e": "apps/goodbyemailgenerator-e2e",
     "mycv": "apps/mycv",
     "mycv-e2e": "apps/mycv-e2e",
     "shared-components": "libs/shared-components"

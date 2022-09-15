@@ -1,0 +1,28 @@
+{
+  "root": "apps/goodbyemailgenerator-e2e",
+  "sourceRoot": "apps/goodbyemailgenerator-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/goodbyemailgenerator-e2e/cypress.json",
+        "devServerTarget": "goodbyemailgenerator:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "goodbyemailgenerator:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/goodbyemailgenerator-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["goodbyemailgenerator"]
+}
