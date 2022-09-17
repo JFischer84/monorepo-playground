@@ -27,7 +27,7 @@ export function Index() {
 
   const randomize = (isChecked: boolean, phrases: string[], setter: Function): void => {
     if (isChecked) {
-      setter(phrases[getRandomNumber(phrases.length - 1)]);
+      setter(phrases[getRandomNumber(phrases.length)]);
     }
   };
 
