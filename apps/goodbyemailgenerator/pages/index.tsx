@@ -36,7 +36,6 @@ export function Index() {
   };
 
   const handleSubjectChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    console.log('jojojo');
     if (!subjectChecked) {
       setSubject(subjects[getRandomNumber(subjects.length - 1)]);
     } else {
