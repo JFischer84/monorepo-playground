@@ -2,7 +2,7 @@ import styles from './index.module.scss';
 import {Button, Card, CardActions, CardContent, FormControlLabel, FormGroup, Switch, Typography} from '@mui/material';
 import CasinoIcon from '@mui/icons-material/Casino';
 import React, {useState} from 'react';
-import {subjects, animalMetaphors, sportMetaphors, intros, goodByePhrases, typicalPhrases, salutations} from './phrases';
+import {subjects, animalMetaphors, sportMetaphors, intros, goodByePhrases, typicalPhrases, salutations} from '../assets/phrases';
 
 export function Index() {
 
