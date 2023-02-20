@@ -8,10 +8,12 @@ This is my Playground to test a monorepo structure with NX.
 - Mycv: A CV page for developers using Nextjs and Zustand.
   You can find the deployed app here: https://jonascv.vercel.app/ (Work in Progress)
 
-(that's all for now, more to come)
+- Goodbye Mail Generator: A fun project to generate random goodbye mails for when you leave your company (german only, sorry).
+  You can find the deployed app here: https://gbmg.vercel.app/ (Work in Progress)
 
-
-
+## Linting 
+From the root run
+`nx lint {projectname}`
 
 ## Generate an application
 

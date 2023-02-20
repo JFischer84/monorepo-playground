@@ -8,14 +8,14 @@ export const Index = () => {
   const setFeatsInStore = useStore((state) => state.setFeats);
   const textAreaRef = useRef(null);
 
-  const [name, setName] = useState('');
-  const [classAndLevel, setClassAndLevel] = useState('');
-  const [background, setBackground] = useState('');
-  const [species, setSpecies] = useState('');
-  const [alignment, setAlignment] = useState('');
-  const [currentFeat, setCurrentFeat] = useState('');
-  const [feats, setFeats] = useState([]);
-  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+  const [name, setName] = useState<string>('');
+  const [classAndLevel, setClassAndLevel] = useState<string>('');
+  const [background, setBackground] = useState<string>('');
+  const [species, setSpecies] = useState<string>('');
+  const [alignment, setAlignment] = useState<string>('');
+  const [currentFeat, setCurrentFeat] = useState<string>('');
+  const [feats, setFeats] = useState<string[]>([]);
+  const [showSuccessMessage, setShowSuccessMessage] = useState<boolean>(false);
 
   const handleSubmit = () => {
     setBaseData({name,

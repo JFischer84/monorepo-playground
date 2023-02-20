@@ -11,7 +11,7 @@ export const Index = () => {
   const cvBaseData = useStore((state) => state.cvDataBaseData);
   const feats = useStore((state) => state.feats);
   const resetStore = useStore((state) => state.reset);
-  const [seeActive, setSeeActive] = useState(true);
+  const [seeActive, setSeeActive] = useState<boolean>(true);
 
   const onNavClick = (navId: NavId) => {
     if (navId === 'SEE') {

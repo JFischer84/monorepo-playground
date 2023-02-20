@@ -6,20 +6,20 @@ import {subjects, animalMetaphors, sportMetaphors, intros, goodByePhrases, typic
 
 export function Index() {
 
-  const [subject, setSubject] = useState('Betreff');
-  const [subjectChecked, setSubjectChecked] = useState(false);
-  const [animalMetaphor, setAnimalMetaphor] = useState('');
-  const [amChecked, setAmChecked] = useState(false);
-  const [sportMetaphor, setSportMetaphor] = useState('');
-  const [smChecked, setSmChecked] = useState(false);
-  const [intro, setIntro] = useState('');
-  const [introChecked, setIntroChecked] = useState(false);
-  const [goodByePhrase, setGoodByePhrase] = useState('');
-  const [gBPChecked, setGBPChecked] = useState(false);
-  const [typicalPhrase, setTypicalPhrase] = useState('');
-  const [tPChecked, setTPChecked] = useState(false);
-  const [salutation, setSalutation] = useState('');
-  const [salutationChecked, setSalutationChecked] = useState(false);
+  const [subject, setSubject] = useState<string>('Betreff');
+  const [subjectChecked, setSubjectChecked] = useState<boolean>(false);
+  const [animalMetaphor, setAnimalMetaphor] = useState<string>('');
+  const [amChecked, setAmChecked] = useState<boolean>(false);
+  const [sportMetaphor, setSportMetaphor] = useState<string>('');
+  const [smChecked, setSmChecked] = useState<boolean>(false);
+  const [intro, setIntro] = useState<string>('');
+  const [introChecked, setIntroChecked] = useState<boolean>(false);
+  const [goodByePhrase, setGoodByePhrase] = useState<string>('');
+  const [gBPChecked, setGBPChecked] = useState<boolean>(false);
+  const [typicalPhrase, setTypicalPhrase] = useState<string>('');
+  const [tPChecked, setTPChecked] = useState<boolean>(false);
+  const [salutation, setSalutation] = useState<string>('');
+  const [salutationChecked, setSalutationChecked] = useState<boolean>(false);
 
   const getRandomNumber = (max: number): number => {
     return Math.floor(Math.random() * max);
