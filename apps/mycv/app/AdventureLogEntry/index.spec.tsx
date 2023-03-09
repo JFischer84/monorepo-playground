@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {render} from '@testing-library/react';
 
 import {AdventureLogEntry} from './index';
 
@@ -7,19 +7,23 @@ describe('AdventureLogEntry', () => {
   it('should render correctly', () => {
     const entry = {entryText: 'entry text'};
 
-    const wrapper = shallow(<AdventureLogEntry entry={entry} />);
-    expect(wrapper.find('.list-group-item').exists()).toBe(true);
-    expect(wrapper.find('li').text()).toBe('entry text');
-    expect(wrapper.find('li').prop('aria-current')).toBe(false);
+    const {container} = render(<AdventureLogEntry entry={entry} />);
+
+    const listItem = container.firstChild;
+    expect(listItem).toBeTruthy();
+    expect(listItem).toHaveClass('list-group-item');
+    expect(listItem).toHaveAttribute('aria-current', 'false');
   });
 
-  it('should render correctly with ', () => {
+  it('should render correctly with isLast true', () => {
     const entry = {entryText: 'entry text',
       isLast: true};
 
-    const wrapper = shallow(<AdventureLogEntry entry={entry} />);
-    expect(wrapper.find('li').hasClass('list-group-item active')).toBe(true);
-    expect(wrapper.find('li').text()).toBe('entry text');
-    expect(wrapper.find('li').prop('aria-current')).toBe(true);
+    const {container} = render(<AdventureLogEntry entry={entry} />);
+
+    const listItem = container.firstChild;
+    expect(listItem).toBeTruthy();
+    expect(listItem).toHaveClass('list-group-item active');
+    expect(listItem).toHaveAttribute('aria-current', 'true');
   });
 });

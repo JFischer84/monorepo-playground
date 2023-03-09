@@ -1,5 +1,6 @@
 {
-  "root": "apps/mycv",
+  "name": "mycv",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/mycv",
   "projectType": "application",
   "targets": {
@@ -36,9 +37,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/mycv"],
+      "outputs": ["{workspaceRoot}/coverage/apps/mycv"],
       "options": {
-        "jestConfig": "apps/mycv/jest.config.js",
+        "jestConfig": "apps/mycv/jest.config.ts",
         "passWithNoTests": true
       }
     },
@@ -50,7 +51,7 @@
       }
     },
     "stylelint": {
-      "executor": "@nrwl/workspace:run-commands",
+      "executor": "nx:run-commands",
       "options": {
         "commands": [
           {

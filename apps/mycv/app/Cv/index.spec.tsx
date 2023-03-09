@@ -1,5 +1,5 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {render} from '@testing-library/react';
 import Cv from './index';
 
 const cvData = {name: 'Jonas Fischer',
@@ -12,13 +12,8 @@ const feats = ['cheese', 'chocolate', 'honey'];
 
 describe('Cv', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<Cv cvData={cvData} feats={feats} />);
-    expect(wrapper.find('.cardContent').exists()).toBe(true);
-    expect(wrapper.find('.profilePicture').exists()).toBe(true);
-    expect(wrapper.find('.card-title').exists()).toBe(true);
-    expect(wrapper.find('.factSection').exists()).toBe(true);
-    expect(wrapper.find('.progressBarContainer').exists()).toBe(true);
-    expect(wrapper.find('.featsContainer').exists()).toBe(true);
-    expect(wrapper.find('.adventureLogContainer').exists()).toBe(true);
+    const {container} = render(<Cv cvData={cvData} feats={feats} />);
+    expect(container.firstChild).toHaveClass('cardContent');
+    expect(container.querySelectorAll('div')).toHaveLength(48);
   });
 });

@@ -1,13 +1,11 @@
-module.exports = {
-  displayName: 'mycv',
+/* eslint-disable */
+export default {
+  displayName: 'goodbyemailgenerator',
   preset: '../../jest.preset.js',
   transform: {
     '^(?!.*\\.(js|jsx|ts|tsx|css|json)$)': '@nrwl/react/plugins/jest',
     '^.+\\.[tj]sx?$': ['babel-jest', { presets: ['@nrwl/next/babel'] }],
   },
   moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx'],
-  coverageDirectory: '../../coverage/apps/mycv',
-  setupFiles: [
-    '<rootDir>/jest.setup.js'
-  ]
+  coverageDirectory: '../../coverage/apps/goodbyemailgenerator',
 };

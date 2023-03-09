@@ -1,14 +1,15 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {render} from '@testing-library/react';
 
 import {Feat} from './index';
 
 describe('Feat', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<Feat featTitle="title" />);
-    expect(wrapper.find('.col').exists()).toBe(true);
-    expect(wrapper.find('h3').exists()).toBe(true);
-    expect(wrapper.find('span').text()).toBe('title');
-    expect(wrapper.find('span').hasClass('badge bg-primary text-light')).toBe(true);
+    const {container} = render(<Feat featTitle="title" />);
+    expect(container.firstChild).toHaveClass('col text-center');
+    expect(container.querySelector('h3')).toBeTruthy();
+    expect(container.querySelector('span')).toBeTruthy();
+    expect(container.querySelector('span')).toHaveClass('badge bg-primary text-light');
+    expect(container.querySelector('span')).toHaveTextContent('title');
   });
 });

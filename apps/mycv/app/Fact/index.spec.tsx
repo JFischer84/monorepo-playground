@@ -1,15 +1,17 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import {render} from '@testing-library/react';
 
 import {Fact} from './index';
 
 describe('Fact', () => {
   it('should render correctly', () => {
-    const wrapper = shallow(<Fact factTitle="title" description="description" />);
-    expect(wrapper.find('.factContainer').exists()).toBe(true);
-    expect(wrapper.find('.fact').exists()).toBe(true);
-    expect(wrapper.find('u').text()).toBe('title');
-    expect(wrapper.find('p')).toHaveLength(2);
-    expect(wrapper.find('p').last().text()).toBe('description');
+    const {container} = render(<Fact factTitle="title" description="description" />);
+    expect(container.firstChild).toHaveClass('factContainer');
+    const div = container.firstChild;
+    expect(div.firstChild).toHaveClass('fact');
+    expect(div.firstChild.firstChild).toHaveTextContent('title');
+    expect(container.querySelector('u')).toBeTruthy();
+    expect(div.lastChild).toHaveClass('description');
+    expect(div.lastChild).toHaveTextContent('description');
   });
 });

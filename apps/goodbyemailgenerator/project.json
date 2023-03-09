@@ -1,5 +1,6 @@
 {
-  "root": "apps/goodbyemailgenerator",
+  "name": "goodbyemailgenerator",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/goodbyemailgenerator",
   "projectType": "application",
   "targets": {
@@ -36,9 +37,9 @@
     },
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/apps/goodbyemailgenerator"],
+      "outputs": ["{workspaceRoot}/coverage/apps/goodbyemailgenerator"],
       "options": {
-        "jestConfig": "apps/goodbyemailgenerator/jest.config.js",
+        "jestConfig": "apps/goodbyemailgenerator/jest.config.ts",
         "passWithNoTests": true
       }
     },

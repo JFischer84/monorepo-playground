@@ -2,63 +2,114 @@
 
 exports[`Index should render correctly 1`] = `
 <div
-  className="page"
+  class="page"
 >
   <div
-    className="wrapper"
+    class="wrapper"
   >
     <div
-      className="container-fluid"
+      class="container-fluid"
     >
       <div
-        className="row"
+        class="row"
       >
         <div
-          className="col"
+          class="col"
         >
           <div
-            className="navigation"
+            class="navigation"
           >
             <nav>
               <div
-                className="nav nav-tabs"
+                class="nav nav-tabs"
                 id="nav-tab"
                 role="tablist"
               >
                 <button
-                  className="nav-item nav-link active"
-                  onClick={[Function]}
+                  class="nav-item nav-link active"
                   type="button"
                 >
                   <div
-                    className="navButtonContainer"
+                    class="navButtonContainer"
                   >
                     <div
-                      className="navIconContainer"
+                      class="navIconContainer"
                     >
-                      <IconEye
-                        size={16}
-                        stroke={3}
-                      />
+                      <svg
+                        class="icon icon-tabler icon-tabler-eye"
+                        fill="none"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        viewBox="0 0 24 24"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                          stroke="none"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="2"
+                        />
+                        <path
+                          d="M22 12c-2.667 4.667 -6 7 -10 7s-7.333 -2.333 -10 -7c2.667 -4.667 6 -7 10 -7s7.333 2.333 10 7"
+                        />
+                      </svg>
                     </div>
                     See
                   </div>
                 </button>
                 <button
-                  className="nav-item nav-link "
-                  onClick={[Function]}
+                  class="nav-item nav-link "
                   type="button"
                 >
                   <div
-                    className="navButtonContainer"
+                    class="navButtonContainer"
                   >
                     <div
-                      className="navIconContainer"
+                      class="navIconContainer"
                     >
-                      <IconCirclePlus
-                        size={16}
-                        stroke={3}
-                      />
+                      <svg
+                        class="icon icon-tabler icon-tabler-circle-plus"
+                        fill="none"
+                        height="16"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="3"
+                        viewBox="0 0 24 24"
+                        width="16"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M0 0h24v24H0z"
+                          fill="none"
+                          stroke="none"
+                        />
+                        <circle
+                          cx="12"
+                          cy="12"
+                          r="9"
+                        />
+                        <line
+                          x1="9"
+                          x2="15"
+                          y1="12"
+                          y2="12"
+                        />
+                        <line
+                          x1="12"
+                          x2="12"
+                          y1="9"
+                          y2="15"
+                        />
+                      </svg>
                     </div>
                     Create
                   </div>
@@ -66,59 +117,561 @@ exports[`Index should render correctly 1`] = `
               </div>
             </nav>
             <button
-              className="btn btn-outline-danger"
-              onClick={[Function]}
+              class="btn btn-outline-danger"
               type="button"
             >
               <div
-                className="navButtonContainer"
+                class="navButtonContainer"
               >
                 <div
-                  className="navIconContainer"
+                  class="navIconContainer"
                 >
-                  <IconHistory
-                    size={16}
-                    stroke={3}
-                  />
+                  <svg
+                    class="icon icon-tabler icon-tabler-history"
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="3"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M0 0h24v24H0z"
+                      fill="none"
+                      stroke="none"
+                    />
+                    <polyline
+                      points="12 8 12 12 14 14"
+                    />
+                    <path
+                      d="M3.05 11a9 9 0 1 1 .5 4m-.5 5v-5h5"
+                    />
+                  </svg>
                 </div>
                 Reset
               </div>
             </button>
           </div>
           <div
-            className="card"
+            class="card"
           >
             <div
-              className="card-body"
+              class="card-body"
             >
-              <Index
-                cvData={
-                  Object {
-                    "alignment": "Neutral Good",
-                    "background": "Catlover/Gamer",
-                    "classAndLevel": "Developer 7",
-                    "name": "Jonas Fischer",
-                    "species": "Human",
-                  }
-                }
-                feats={
-                  Array [
-                    "Jest",
-                    "Enzyme",
-                    "SCSS",
-                    "ESLint",
-                    "Stylelint",
-                    "ES6",
-                    "Next.js",
-                    "Webpack",
-                    "JUnit",
-                    "Mockito",
-                    "Elasticsearch",
-                    "Git",
-                    "Scrum",
-                  ]
-                }
-              />
+              <div
+                class="cardContent"
+              >
+                <div
+                  class="upperContainer"
+                >
+                  <div
+                    class="imageContainer"
+                  >
+                    <img
+                      alt="profile picture"
+                      class="profilePicture"
+                      data-nimg="1"
+                      decoding="async"
+                      height="256"
+                      loading="lazy"
+                      src="/_next/image?url=%2Fprofile_pic2.jpg&w=640&q=75"
+                      srcset="/_next/image?url=%2Fprofile_pic2.jpg&w=256&q=75 1x, /_next/image?url=%2Fprofile_pic2.jpg&w=640&q=75 2x"
+                      style="color: transparent;"
+                      width="256"
+                    />
+                  </div>
+                  <h3
+                    class="card-title"
+                  >
+                    Jonas Fischer
+                  </h3>
+                  <div
+                    class="factSection"
+                  >
+                    <div
+                      class="factSubContainer"
+                    >
+                      <div
+                        class="factContainer"
+                      >
+                        <p
+                          class="fact"
+                        >
+                          <u>
+                            Developer 7
+                          </u>
+                        </p>
+                        <p
+                          class="description"
+                        >
+                          Class & Level
+                        </p>
+                      </div>
+                      <div
+                        class="factContainer"
+                      >
+                        <p
+                          class="fact"
+                        >
+                          <u>
+                            Catlover/Gamer
+                          </u>
+                        </p>
+                        <p
+                          class="description"
+                        >
+                          Background
+                        </p>
+                      </div>
+                    </div>
+                    <div
+                      class="factSubContainer"
+                    >
+                      <div
+                        class="factContainer"
+                      >
+                        <p
+                          class="fact"
+                        >
+                          <u>
+                            Neutral Good
+                          </u>
+                        </p>
+                        <p
+                          class="description"
+                        >
+                          Alignment
+                        </p>
+                      </div>
+                      <div
+                        class="factContainer"
+                      >
+                        <p
+                          class="fact"
+                        >
+                          <u>
+                            Human
+                          </u>
+                        </p>
+                        <p
+                          class="description"
+                        >
+                          Species
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="progressBarContainer"
+                >
+                  <div
+                    class="accordion customAccordion"
+                  >
+                    <div
+                      class="accordion-item"
+                    >
+                      <h4
+                        class="accordion-header"
+                      >
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                        >
+                          <h4>
+                            Skills
+                          </h4>
+                        </button>
+                      </h4>
+                      <div
+                        class="customAccordionTransition accordion-collapse collapse "
+                      >
+                        <div
+                          class="accordion-body"
+                        >
+                          <div
+                            class="progressBar"
+                          >
+                            <h5
+                              class="title"
+                            >
+                              JavaScript
+                            </h5>
+                            <div
+                              class="progress"
+                            >
+                              <div
+                                class="filling filling75 colorjs"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="progressBar"
+                          >
+                            <h5
+                              class="title"
+                            >
+                              TypeScript
+                            </h5>
+                            <div
+                              class="progress"
+                            >
+                              <div
+                                class="filling filling85 colorts"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="progressBar"
+                          >
+                            <h5
+                              class="title"
+                            >
+                              React
+                            </h5>
+                            <div
+                              class="progress"
+                            >
+                              <div
+                                class="filling filling85 colorreact"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="progressBar"
+                          >
+                            <h5
+                              class="title"
+                            >
+                              Java
+                            </h5>
+                            <div
+                              class="progress"
+                            >
+                              <div
+                                class="filling filling75 colorjava"
+                              />
+                            </div>
+                          </div>
+                          <div
+                            class="progressBar"
+                          >
+                            <h5
+                              class="title"
+                            >
+                              Spring Boot
+                            </h5>
+                            <div
+                              class="progress"
+                            >
+                              <div
+                                class="filling filling60 colorsb"
+                              />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="featsContainer"
+                >
+                  <div
+                    class="accordion customAccordion"
+                  >
+                    <div
+                      class="accordion-item"
+                    >
+                      <h4
+                        class="accordion-header"
+                      >
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                        >
+                          <h4>
+                            Feats
+                          </h4>
+                        </button>
+                      </h4>
+                      <div
+                        class="customAccordionTransition accordion-collapse collapse "
+                      >
+                        <div
+                          class="accordion-body"
+                        >
+                          <div
+                            class="row align-items-center gx-2"
+                          >
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Jest
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Enzyme
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  SCSS
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  ESLint
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Stylelint
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  ES6
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Next.js
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Webpack
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  JUnit
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Mockito
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Elasticsearch
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Git
+                                </span>
+                              </h3>
+                            </div>
+                            <div
+                              class="col text-center"
+                            >
+                              <h3>
+                                <span
+                                  class="badge bg-primary text-light"
+                                >
+                                  Scrum
+                                </span>
+                              </h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="adventureLogContainer"
+                >
+                  <div
+                    class="accordion customAccordion"
+                  >
+                    <div
+                      class="accordion-item"
+                    >
+                      <h4
+                        class="accordion-header"
+                      >
+                        <button
+                          class="accordion-button collapsed"
+                          type="button"
+                        >
+                          <h4>
+                            Adventure Log
+                          </h4>
+                        </button>
+                      </h4>
+                      <div
+                        class="customAccordionTransition accordion-collapse collapse "
+                      >
+                        <div
+                          class="accordion-body"
+                        >
+                          <ul
+                            class="list-group list-group-flush"
+                          >
+                            <li
+                              aria-current="true"
+                              class="list-group-item active"
+                            >
+                              2018 - Today: Software Developer / Immowelt Hamburg GmbH
+                            </li>
+                            <li
+                              aria-current="false"
+                              class="list-group-item "
+                            >
+                              2015 - 2018: Software Developer Apprenticeship / Immowelt Hamburg GmbH
+                            </li>
+                            <li
+                              aria-current="false"
+                              class="list-group-item "
+                            >
+                              2013 - 2015: Studies Game Programming / SAE Hamburg (Diploma)
+                            </li>
+                            <li
+                              aria-current="false"
+                              class="list-group-item "
+                            >
+                              2012 - 2013: Nursery School Teacher Apprenticeship / Fachschule für Sozialpädagogik 2
+                            </li>
+                            <li
+                              aria-current="false"
+                              class="list-group-item "
+                            >
+                              2012 - 2012: Internships as Nursery School Teacher
+                            </li>
+                            <li
+                              aria-current="false"
+                              class="list-group-item "
+                            >
+                              2011 - 2012: Call Center Agent / Axel Springer Direkt
+                            </li>
+                            <li
+                              aria-current="false"
+                              class="list-group-item "
+                            >
+                              2004 - 2011: Studies Media Culture / Universität Hamburg (Bakkalaureus Artium)
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <h4>
+                  Profiles
+                </h4>
+                <div
+                  class="row align-items-center gx-4"
+                >
+                  <div
+                    class="col"
+                  >
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                    >
+                      Github
+                    </button>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                    >
+                      Xing
+                    </button>
+                  </div>
+                  <div
+                    class="col"
+                  >
+                    <button
+                      class="btn btn-primary"
+                      type="button"
+                    >
+                      Linkedin
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

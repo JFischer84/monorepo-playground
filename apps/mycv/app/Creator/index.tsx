@@ -119,10 +119,7 @@ export const Index = () => {
         <button onClick={() => handleSubmit()} type="button" className="btn btn-primary">
           <div className={styles.navButtonContainer}>
             <div className={styles.navIconContainer}>
-              <IconCircleCheck
-                size={16}
-                stroke={3}
-              />
+              <IconCircleCheck />
             </div>
             Submit
           </div>

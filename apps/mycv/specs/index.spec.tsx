@@ -1,7 +1,5 @@
 import React from 'react';
 import {render} from '@testing-library/react';
-import {shallow} from 'enzyme';
-import toJson from 'enzyme-to-json';
 
 import {Index} from '../pages';
 
@@ -13,7 +11,7 @@ describe('Index', () => {
   });
 
   it('should render correctly', () => {
-    const wrapper = shallow(<Index />);
-    expect(toJson(wrapper)).toMatchSnapshot();
+    const {container} = render(<Index />);
+    expect(container.firstChild).toMatchSnapshot();
   });
 });
