@@ -13,3 +13,4 @@
 - (Set MyCV Folder in Vercel instead of root) << seems to be solved
 - Maybe: Use Request Animation Frame to solve Accordion issue
 - Maybe: Dark Mode
+- write new test for Accordion in lib.
