@@ -13,3 +13,7 @@ const nextConfig = {
 };
 
 module.exports = withNx(nextConfig);
+
+module.exports = {
+  transpilePackages: ['libs'],
+}

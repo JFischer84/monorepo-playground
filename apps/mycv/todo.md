@@ -1,4 +1,6 @@
 # TODO
+- write new test for Accordion in lib
+- fix bug if user does not pick an allignment
 - add under construction label to create page
 - break creator in multiple components and test them separately
 - Find a way to add quest log entries conveniently
@@ -13,4 +15,4 @@
 - (Set MyCV Folder in Vercel instead of root) << seems to be solved
 - Maybe: Use Request Animation Frame to solve Accordion issue
 - Maybe: Dark Mode
-- write new test for Accordion in lib.
+
