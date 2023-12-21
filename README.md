@@ -2,6 +2,8 @@
 
 # MonorepoPlayground
 
+**I am planning on reworking this project (I hopefully  find the time soon).**
+
 This is my Playground to test a monorepo structure with NX.
 
 ## Projects
